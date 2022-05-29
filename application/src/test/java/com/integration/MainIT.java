@@ -12,7 +12,7 @@ class MainIT {
 
     @Test
     void runJavaAgents() throws IOException {
-        Process application = Runtime.getRuntime().exec("java -javaagent:../static-java-agent/target/static-java-agent-1.0.jar -jar ./target/application-SNAPSHOT-1.0.jar");
+        Process application = Runtime.getRuntime().exec("java -jar ./target/application-SNAPSHOT-1.0.jar");
 
         try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(application.getInputStream()))) {
             Process dynamicAgentLoading =
