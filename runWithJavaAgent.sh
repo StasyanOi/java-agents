@@ -1,1 +1,0 @@
-java -javaagent:./static-java-javaagent/target/static-java-javaagent-1.0.jar -jar ./application/target/application-1.0.jar
