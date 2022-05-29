@@ -22,5 +22,5 @@ jobs:
         cache: maven
     - name: Build Java Agents
       run: mvn clean verify
-    - name: Test java agents
+    - name: Test Java Agents
       run: mvn -f ./application/pom.xml clean verify
