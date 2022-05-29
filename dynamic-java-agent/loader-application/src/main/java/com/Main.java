@@ -14,7 +14,7 @@ public class Main {
                 .filter(processHandle -> processHandle.info()
                         .commandLine()
                         .orElse("")
-                        .contains("application-1.0.jar"))
+                        .contains("application-SNAPSHOT-1.0.jar"))
                 .mapToLong(ProcessHandle::pid)
                 .findAny()
                 .orElse(-1);
@@ -25,6 +25,6 @@ public class Main {
 
         VirtualMachine virtualMachine = VirtualMachine.attach(String.valueOf(applicationPid));
 
-        virtualMachine.loadAgent("/home/stanislav/IdeaProjects/java-agents/dynamic-java-agent/agent-jar/target/agent-jar-1.0.jar");
+        virtualMachine.loadAgent("../dynamic-java-agent/agent-jar/target/agent-jar-1.0.jar");
     }
 }

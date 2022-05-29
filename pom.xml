@@ -13,7 +13,6 @@
     </properties>
 
     <modules>
-        <module>application</module>
         <module>static-java-agent</module>
         <module>dynamic-java-agent</module>
         <module>dynamic-java-agent/agent-jar</module>
